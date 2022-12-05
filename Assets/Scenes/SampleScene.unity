@@ -384,7 +384,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1187535089
 GameObject:
@@ -397,8 +397,9 @@ GameObject:
   - component: {fileID: 1187535092}
   - component: {fileID: 1187535091}
   - component: {fileID: 1187535090}
+  - component: {fileID: 1187535093}
   m_Layer: 0
-  m_Name: angel
+  m_Name: Angel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -495,8 +496,23 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1187535093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187535089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d202a894f7118a4e98e17fe96f57d4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movespeed: 5
+  bulletcd: 0
+  bulletprefab: {fileID: 7499508859475810160, guid: 305a22d920e86a046ae4ce768e8bbeea, type: 3}
 --- !u!1 &1362987601
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,6 +525,7 @@ GameObject:
   - component: {fileID: 1362987602}
   - component: {fileID: 1362987604}
   - component: {fileID: 1362987605}
+  - component: {fileID: 1362987606}
   m_Layer: 0
   m_Name: Devil
   m_TagString: Untagged
@@ -581,7 +598,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1362987604
 Animator:
@@ -629,6 +646,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6005235, y: 1.084338}
   m_EdgeRadius: 0
+--- !u!114 &1362987606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362987601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cfbc9a88fed4c45aca1d4d9d488409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1884745832
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,7 +835,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
