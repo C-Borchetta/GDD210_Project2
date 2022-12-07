@@ -18,4 +18,10 @@ public class enemyscript : MonoBehaviour
     {
         transform.position -= (transform.position - target.transform.position).normalized * moveSpeed * Time.deltaTime;
     }
+
+    public void TakeDamage(float damage)
+    {
+            Destroy(gameObject);
+    }
 }
+
