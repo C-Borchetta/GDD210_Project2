@@ -1,33 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public float movespeed;
     public float bulletcd;
     public GameObject upbullet;
     public GameObject downbullet;
     public GameObject leftbullet;
     public GameObject rightbullet;
+    public TMP_Text Score;
+    private bool counting = true;
+    private float T;
 
     // Start is called before the first frame update
     void Start()
     {
         bulletcd = 0;
+        T = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        bulletcd -= Time.deltaTime;
-
-
+        //Player movement
         transform.position += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f) * Time.deltaTime * movespeed;
 
+        //Score counter
+        T += Time.deltaTime;
+
+        if(counting == true)
+        {
+            Score.text = "Score:" + Mathf.Round(T) / 1f;
+        }
+
         // Shooter
+        bulletcd -= Time.deltaTime;
+
         if (Input.GetKey(KeyCode.UpArrow) && bulletcd <= 0)
         {
             Instantiate(upbullet, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
