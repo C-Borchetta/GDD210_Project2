@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bulletspeed = 4;
+        bulletspeed = 5.5;
         bullettarget = FindObjectOfType<enemyscript>().transform;
         despawntimer = 2;
     }

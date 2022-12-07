@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7119277993455572467}
   - component: {fileID: -757018418231355558}
   m_Layer: 0
-  m_Name: lightarrow
+  m_Name: leftarrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

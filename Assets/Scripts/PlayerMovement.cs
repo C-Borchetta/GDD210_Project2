@@ -28,26 +28,26 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow) && bulletcd <= 0)
         {
             Instantiate(bulletprefab, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
-            bulletcd = 0.3f;
+            bulletcd = 0.45f;
 
         }
         else if (Input.GetKey(KeyCode.LeftArrow) && bulletcd <= 0)
         {
             Instantiate(bulletprefab, new Vector3(transform.position.x - 1, transform.position.y, transform.position.z), Quaternion.identity);
-            bulletcd = 0.3f;
+            bulletcd = 0.45f;
 
         }
         else if (Input.GetKey(KeyCode.RightArrow) && bulletcd <= 0)
         {
             Instantiate(bulletprefab, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
-            bulletcd = 0.3f;
+            bulletcd = 0.45f;
 
         }
         else if (Input.GetKey(KeyCode.DownArrow) && bulletcd <= 0)
         {
 
             Instantiate(bulletprefab, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity);
-            bulletcd = 0.3f;
+            bulletcd = 0.45f;
 
         }
     }
