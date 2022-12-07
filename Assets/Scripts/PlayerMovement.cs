@@ -7,7 +7,10 @@ public class PlayerMovement : MonoBehaviour
 
     public float movespeed;
     public float bulletcd;
-    public GameObject bulletprefab;
+    public GameObject upbullet;
+    public GameObject downbullet;
+    public GameObject leftbullet;
+    public GameObject rightbullet;
 
     // Start is called before the first frame update
     void Start()
@@ -27,26 +30,26 @@ public class PlayerMovement : MonoBehaviour
         // Shooter
         if (Input.GetKey(KeyCode.UpArrow) && bulletcd <= 0)
         {
-            Instantiate(bulletprefab, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
+            Instantiate(upbullet, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
             bulletcd = 0.45f;
 
         }
         else if (Input.GetKey(KeyCode.LeftArrow) && bulletcd <= 0)
         {
-            Instantiate(bulletprefab, new Vector3(transform.position.x - 1, transform.position.y, transform.position.z), Quaternion.identity);
+            Instantiate(leftbullet, new Vector3(transform.position.x - 1, transform.position.y, transform.position.z), Quaternion.identity);
             bulletcd = 0.45f;
 
         }
         else if (Input.GetKey(KeyCode.RightArrow) && bulletcd <= 0)
         {
-            Instantiate(bulletprefab, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
+            Instantiate(rightbullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
             bulletcd = 0.45f;
 
         }
         else if (Input.GetKey(KeyCode.DownArrow) && bulletcd <= 0)
         {
 
-            Instantiate(bulletprefab, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity);
+            Instantiate(downbullet, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity);
             bulletcd = 0.45f;
 
         }

@@ -2,25 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class leftarrow : MonoBehaviour
 {
-    public Transform bullettarget;
     public float bulletspeed;
     public float despawntimer;
-    public Rigidbody bulletrb;
 
     // Start is called before the first frame update
     void Start()
     {
         bulletspeed = 5.5f;
-        bullettarget = FindObjectOfType<enemyscript>().transform;
         despawntimer = 2;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += (bullettarget.position - transform.position).normalized * bulletspeed * Time.deltaTime;
+        transform.position += new Vector3(-1, 0, 0) * Time.deltaTime * bulletspeed;
 
 
         if (despawntimer <= 0)
