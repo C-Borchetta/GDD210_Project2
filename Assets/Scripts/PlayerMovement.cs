@@ -7,20 +7,25 @@ using TMPro;
 public class PlayerMovement : MonoBehaviour
 {
     public float movespeed;
+    //Arrows
     public float bulletcd;
     public GameObject upbullet;
     public GameObject downbullet;
     public GameObject leftbullet;
     public GameObject rightbullet;
+    //score
     public TMP_Text Score;
     private bool counting = true;
     private float T;
+    //health
+    public Image Health;
 
     // Start is called before the first frame update
     void Start()
     {
         bulletcd = 0;
         T = 0;
+        Health.fillAmount = 0.9f;
     }
 
     // Update is called once per frame
@@ -65,6 +70,21 @@ public class PlayerMovement : MonoBehaviour
             Instantiate(downbullet, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity);
             bulletcd = 0.45f;
 
+        }
+
+        //Lose state 
+        if(Health.fillAmount == 0.1f)
+        {
+           Time.timeScale = 0;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        enemyscript e = collision.gameObject.GetComponent<enemyscript>();
+        if (e)
+        {
+            Health.fillAmount -= 0.1f;
         }
     }
 }

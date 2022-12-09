@@ -931,13 +931,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d202a894f7118a4e98e17fe96f57d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 4
+  movespeed: 3
   bulletcd: 0
   upbullet: {fileID: 6390318841135302453, guid: 3698f878756f044459fef19d5405cb3a, type: 3}
   downbullet: {fileID: 6769487127151110551, guid: 2bdd7d7a22af8e04b95c76efeb390ffc, type: 3}
   leftbullet: {fileID: 7211627506823830752, guid: 1355ed78a779aa647ab537b34e9d674e, type: 3}
   rightbullet: {fileID: 8450121055315933659, guid: afbe486f91024b64886a525ee03168e1, type: 3}
   Score: {fileID: 202149148}
+  Health: {fileID: 1636762604}
 --- !u!50 &1187535094
 Rigidbody2D:
   serializedVersion: 4
@@ -1049,7 +1050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 3312631275890100526, guid: 334c6f7ae6285794e94c482db3f21afb, type: 3}
   enable: 0
-  cooldown: 3
+  cooldown: 4.8
 --- !u!212 &1546945781
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1225,7 +1226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 3312631275890100526, guid: 334c6f7ae6285794e94c482db3f21afb, type: 3}
   enable: 0
-  cooldown: 3
+  cooldown: 4.8
 --- !u!212 &1828909725
 SpriteRenderer:
   m_ObjectHideFlags: 0
