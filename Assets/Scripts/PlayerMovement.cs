@@ -73,9 +73,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Lose state 
-        if(Health.fillAmount == 0.1f)
+        if (Health.fillAmount == 0.1f)
         {
-           Time.timeScale = 0;
+            Time.timeScale = 0;
         }
     }
 
@@ -86,5 +86,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Health.fillAmount -= 0.1f;
         }
+
     }
 }
