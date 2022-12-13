@@ -17,8 +17,11 @@ public class PlayerMovement : MonoBehaviour
     public TMP_Text Score;
     private bool counting = true;
     private float T;
-    //health
+    //UI
     public Image Health;
+    public GameObject Losescreen;
+    public GameObject Pausescreen;
+    public GameObject Pausebutton;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
         bulletcd = 0;
         T = 0;
         Health.fillAmount = 0.9f;
+        Losescreen.SetActive(false);
+        Pausescreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -73,9 +78,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Lose state 
-        if (Health.fillAmount == 0.1f)
+        if (Health.fillAmount <= 0.1f)
         {
-            Time.timeScale = 0;
+            Losescreen.SetActive(true);
+            Pausebutton.SetActive(false);
         }
     }
 
@@ -87,5 +93,19 @@ public class PlayerMovement : MonoBehaviour
             Health.fillAmount -= 0.1f;
         }
 
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        Pausescreen.SetActive(true);
+        Pausebutton.SetActive(false);
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        Pausescreen.SetActive(false);
+        Pausebutton.SetActive(true);
     }
 }
