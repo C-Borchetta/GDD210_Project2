@@ -1160,6 +1160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 358938252}
   - component: {fileID: 358938255}
+  - component: {fileID: 358938256}
   - component: {fileID: 358938254}
   - component: {fileID: 358938253}
   m_Layer: 5
@@ -1233,7 +1234,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 358938254}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 358938256}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &358938254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1272,6 +1285,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 358938251}
   m_CullTransparentMesh: 1
+--- !u!114 &358938256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358938251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acda06381350d60419d38e46f3717b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: TitleScreen
 --- !u!1 &461199242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2974,7 +3000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1618254159
 RectTransform:
   m_ObjectHideFlags: 0
