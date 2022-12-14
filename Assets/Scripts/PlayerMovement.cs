@@ -22,6 +22,12 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Losescreen;
     public GameObject Pausescreen;
     public GameObject Pausebutton;
+    //Anims
+    public SpriteRenderer spr;
+    public Sprite angelUp;
+    public Sprite angelDown;
+    public Sprite angelLeft;
+    public Sprite angelRight;
 
     // Start is called before the first frame update
     void Start()
@@ -53,25 +59,28 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow) && bulletcd <= 0)
         {
+            spr.sprite = angelUp;
             Instantiate(upbullet, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
             bulletcd = 0.45f;
 
         }
         else if (Input.GetKey(KeyCode.LeftArrow) && bulletcd <= 0)
         {
+            spr.sprite = angelLeft;
             Instantiate(leftbullet, new Vector3(transform.position.x - 1, transform.position.y, transform.position.z), Quaternion.identity);
             bulletcd = 0.45f;
 
         }
         else if (Input.GetKey(KeyCode.RightArrow) && bulletcd <= 0)
         {
+            spr.sprite = angelRight;
             Instantiate(rightbullet, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
             bulletcd = 0.45f;
 
         }
         else if (Input.GetKey(KeyCode.DownArrow) && bulletcd <= 0)
         {
-
+            spr.sprite = angelDown;
             Instantiate(downbullet, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity);
             bulletcd = 0.45f;
 
